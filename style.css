@@ -7,7 +7,7 @@
 /* Fundo com gradiente animado */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #F0F8FF, #778899, #00BFFF, #FF6A00);
+    background: linear-gradient(45deg, #F0F8FF, #778899, #007da7, #FF6A00);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
     color: #333;
