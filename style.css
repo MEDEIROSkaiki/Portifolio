@@ -1,41 +1,125 @@
-*{
+* {
     margin: 0;
-    border: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(to bottom, #F0F8FF 0%, #778899 100%);
-    height: 100vh;
-}
-
-.titulo{
-    color: #708090;
-    text-align: center;
-}
-
-/* texto */
-p{
-    border: 1px solid black;
-    padding: 15px;
-    height: 250px;
-    width: 500px;
-
-   display: flex;
-   align-items: center;
-}
-
-nav a{
-    text-decoration: none;
-    color: transparent;
-    padding: 10px 20px;
-    border-radius: 50px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    margin: 5px;
-    color: #708090;
-    border-color: #00fbff;
-    box-shadow: 0 0 10px rgba(0, 251, 255, 0.4);
-   
+/* Fundo com gradiente animado */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #F0F8FF, #778899, #00BFFF, #FF6A00);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #333;
+    line-height: 1.6;
     display: flex;
-    
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Animação do gradiente */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+header.titulo, .sobre, .projetos, .certificados, .contatos {
+    text-align: center;
+    padding: 20px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header.titulo img.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.titulo h1 {
+    color: #2F4F4F;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #2F4F4F;
+}
+
+p {
+    text-align: justify;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav a, .contatos-links a, .certificados ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #00bfff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de hover de cores */
+nav a:hover {
+    background-color: #1E90FF;
+    transform: scale(1.1);
+}
+
+/* Certificados - cores*/
+.certificados ul li a.credly:hover {
+    background-color: #FF6A00; 
+    transform: scale(1.1);
+}
+
+.certificados ul li a.google:hover {
+    background-color: #4285F4; 
+    transform: scale(1.1);
+}
+
+/* Contatos - Cores */
+.contatos-links a.email:hover {
+    background-color: #D44638; 
+    transform: scale(1.1);
+}
+
+.contatos-links a.linkedin:hover {
+    background-color: #0077B5; 
+    transform: scale(1.1);
+}
+
+.contatos-links a.whatsapp:hover {
+    background-color: #25D366; 
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #2F4F4F;
+    color: #FFF;
+    font-size: 0.9rem;
 }
